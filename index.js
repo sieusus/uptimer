@@ -1,3 +1,14 @@
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at Port: ${port}`);
+});
 require("dotenv").config();
 const { Client, Collection } = require("discord.js");
 const UrlsConfig = require("./database/models/UrlsConfig");
